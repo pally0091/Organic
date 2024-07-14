@@ -17,7 +17,7 @@ interface ProductCardProps {
   data: Product;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   const { name, price, discountedPrice, image, type } = data;
   return (
     <div className="bg-[#F9F8F8] rounded-md p-[30px]">
