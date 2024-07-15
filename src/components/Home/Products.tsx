@@ -48,7 +48,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
 
 const Products = () => {
   return (
-    <div className="">
+    <div className="mb-[150px]">
       <div className="text-center">
         <span className="tag mb-2">Categories </span>
         <h1 className="text-[50px] font-bold">Our Products</h1>

@@ -66,7 +66,7 @@ const TextContainer = () => {
 
 const Banner2 = () => {
   return (
-    <div className="bg-[#F9F8F8] flex ps-[100px] pe-[250px] pt-[90px] pb-[110px] items-center">
+    <div className="bg-[#F9F8F8] flex ps-[100px] pe-[250px] pt-[90px] pb-[110px] items-center mb-[150px]">
       <div className="max-w-[910px] w-full">
         <Image
           src="/Images/F-1.png"

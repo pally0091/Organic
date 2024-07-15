@@ -3,7 +3,7 @@ import React from "react";
 
 const Promotion = () => {
   return (
-    <div className="flex gap-[35px] justify-center">
+    <div className="flex gap-[35px] justify-center py-[150px]">
       <div>
         <Image
           src="/Images/Frame1.png"

@@ -64,3 +64,39 @@ export const products = [
         type:"Fresh"
     }
 ]
+
+
+export const offeredProducts = [
+    {
+        id: 1,
+        name: "Vegan Red Tomato",
+        price: "$20.00",
+        discountedPrice: "$17.00",
+        image: "/Images/redtomato.png",
+        type:"Veggetable"
+    },
+    {
+        id: 2,
+        name: "Mung Bean",
+        price: "$20.00",
+        discountedPrice: "$11.00",
+        image: "/Images/mung.png",
+        type:"Health"
+    },
+    {
+        id: 3,
+        name: "Brown Hazelnut",
+        price: "$20.00",
+        discountedPrice: "$12.00",
+        image: "/Images/hazlenut.png",
+        type:"Nuts"
+    },
+    {
+        id: 4,
+        name: "Eggs",
+        price: "$20.00",
+        discountedPrice: "$17.00",
+        image: "/Images/egg.png",
+        type:"Fresh"
+    }
+]
