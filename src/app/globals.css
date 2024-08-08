@@ -29,3 +29,9 @@ body {
   color: #68a47f;
   @apply text-[36px];
 }
+#subscribe {
+  background-image: url(/Images/subscribe.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}

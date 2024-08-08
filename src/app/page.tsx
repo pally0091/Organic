@@ -6,6 +6,7 @@ import News from "@/components/Home/News";
 import OfferSection from "@/components/Home/OfferSection";
 import Products from "@/components/Home/Products";
 import Promotion from "@/components/Home/Promotion";
+import Subscribe from "@/components/Home/Subscribe";
 import Testimonial from "@/components/Home/Testimonial";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <Econis />
       <Items />
       <News />
+      <Subscribe />
     </div>
   );
 }
