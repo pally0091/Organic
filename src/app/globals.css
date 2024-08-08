@@ -41,3 +41,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+#shopBanner {
+  background-image: url(/Images/shop/banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
