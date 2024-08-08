@@ -8,7 +8,7 @@ const OfferSection = () => {
   const data = offeredProducts;
   return (
     <div className="px-[250px] py-[200px] bg-[#274C5B]">
-      <div className="flex justify-between mb-[50px]">
+      <div className="flex justify-between items-center mb-[50px]">
         <div>
           <span className="tag mb-2">Offer </span>
           <h1 className="text-white font-semibold text-[50px]">
