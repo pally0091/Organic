@@ -1,9 +1,10 @@
+import Banner from "@/components/about/Banner";
 import React from "react";
 
 const AboutPage = () => {
   return (
     <div>
-      <p>This is about page</p>
+      <Banner />
     </div>
   );
 };

@@ -31,7 +31,13 @@ body {
 }
 #subscribe {
   background-image: url(/Images/subscribe.png);
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#aboutBanner {
+  background-image: url(/Images/about/banner.png);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
