@@ -20,8 +20,8 @@ const menu = [
       },
       {
         id: 3.2,
-        title: "Example 2",
-        url: "/example2",
+        title: "Quality Standard",
+        url: "/quality",
       },
     ],
   },
