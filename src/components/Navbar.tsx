@@ -65,6 +65,7 @@ const MenuContainer = () => {
                   >
                     <Link
                       href={submenuItem.url}
+                      onClick={handleSubmenu}
                       className={`text-[#294a5c] font-semibold ${
                         pathname === submenuItem.url
                           ? "text-gray-400 "

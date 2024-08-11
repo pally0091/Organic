@@ -15,8 +15,8 @@ const menu = [
     subMenu: [
       {
         id: 3.1,
-        title: "Example",
-        url: "/example",
+        title: "Services",
+        url: "/service",
       },
       {
         id: 3.2,
