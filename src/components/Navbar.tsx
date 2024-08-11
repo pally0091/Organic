@@ -51,7 +51,11 @@ const MenuContainer = () => {
                 className=" flex items-center gap-1 font-semibold "
               >
                 {item.title}
-                <IoIosArrowDown />
+                <IoIosArrowDown
+                  className={`${
+                    open ? "-rotate-180" : ""
+                  } transition-all duration-300`}
+                />
               </Link>
               <ul
                 className={`${
@@ -60,7 +64,7 @@ const MenuContainer = () => {
               >
                 {item.subMenu?.map((submenuItem) => (
                   <li
-                    className="relative text-base text-black duration-500 "
+                    className="relative text-base text-black duration-500 py-2"
                     key={submenuItem.id}
                   >
                     <Link
