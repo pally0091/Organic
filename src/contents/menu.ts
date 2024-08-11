@@ -23,6 +23,16 @@ const menu = [
         title: "Quality Standard",
         url: "/quality",
       },
+      {
+        id: 3.3,
+        title: "Portfolio Standard",
+        url: "/portfolio",
+      },
+      {
+        id: 3.4,
+        title: "Our Team",
+        url: "/team",
+      },
     ],
   },
   {

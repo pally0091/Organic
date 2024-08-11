@@ -162,7 +162,7 @@ const Team = () => {
     {
       name: "Giovani Bacardo",
       position: "Farmer",
-      image: "/Images/about/member1.jpg",
+      image: "/Images/team/member1.jpg",
       social: [
         {
           platform: "Instagram",
@@ -179,7 +179,7 @@ const Team = () => {
     {
       name: "Marianne Loreno",
       position: "Designer",
-      image: "/Images/about/member2.jpg",
+      image: "/Images/team/member2.jpg",
       social: [
         {
           platform: "Instagram",
@@ -201,7 +201,7 @@ const Team = () => {
     {
       name: "Riga Pelore",
       position: "Farmer",
-      image: "/Images/about/member3.jpg",
+      image: "/Images/team/member3.jpg",
       social: [
         {
           platform: "Instagram",

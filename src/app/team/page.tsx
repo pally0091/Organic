@@ -7,18 +7,18 @@ const Banner = () => {
     <div id="aboutBanner">
       <div className="relative text-center">
         <img
-          src="/Images/quality/quality-banner.jpg"
+          src="/Images/team/team-banner.jpg"
           alt=""
         />
         <p className="absolute inset-0 flex items-center justify-center text-4xl font-bold ">
-          Quality Standard
+          Our Team
         </p>
       </div>
     </div>
   );
 };
 
-const QualityPage = () => {
+const Teams = () => {
   return (
     <div>
       <Banner />
@@ -29,4 +29,4 @@ const QualityPage = () => {
   );
 };
 
-export default QualityPage;
+export default Teams;
