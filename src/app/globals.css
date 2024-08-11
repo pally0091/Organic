@@ -52,3 +52,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+#advertise {
+  background-image: url(/Images/service/bg-img.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
