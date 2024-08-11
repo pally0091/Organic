@@ -33,6 +33,11 @@ const menu = [
         title: "Our Team",
         url: "/team",
       },
+      {
+        id: 3.4,
+        title: "Contact Us",
+        url: "/contact",
+      },
     ],
   },
   {

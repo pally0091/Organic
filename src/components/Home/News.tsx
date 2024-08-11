@@ -33,7 +33,7 @@ const news: News[] = [
   },
 ];
 
-const NewsContainer: React.FC<NewsContainerProps> = ({
+export const NewsContainer: React.FC<NewsContainerProps> = ({
   data,
 }: {
   data: any;
