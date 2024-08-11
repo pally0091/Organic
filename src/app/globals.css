@@ -29,6 +29,11 @@ body {
   color: #68a47f;
   @apply text-4xl;
 }
+.tag-two {
+  font-family: "Yellowtail";
+  color: #68a47f;
+  @apply text-2xl;
+}
 #subscribe {
   background-image: url(/Images/subscribe.png);
   background-size: cover;
