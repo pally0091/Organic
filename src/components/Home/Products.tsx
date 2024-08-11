@@ -20,15 +20,15 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   const { name, price, discountedPrice, image, type } = data;
   return (
-    <div className="bg-[#F9F8F8] rounded-md p-[30px]">
-      <p className="bg-[#274C5B] w-fit text-white px-1.5 py-1 rounded-md mb-[13px]">
+    <div className="bg-[#F9F8F8] rounded-xl p-[30px]">
+      <p className="bg-[#274C5B] w-fit text-white px-1.5 py-1 rounded-xl mb-[13px]">
         {type}
       </p>
       <div className="aspect-square">
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover rounded-md"
+          className="w-full h-full object-cover rounded-xl"
         />
       </div>
       <div className="mt-1">

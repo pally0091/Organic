@@ -30,7 +30,7 @@ const ProductsList = () => {
       {shopData.map((item) => (
         <Link
           key={item.id}
-          href={`/shop/${item.name}`}
+          href={`/shop/${item.id}`}
         >
           <ProductCard data={item} />
         </Link>
