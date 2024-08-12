@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import { ProductCard } from "@/components/Home/Products";
 import Subscribe from "@/components/Subscribe";
 import { products } from "@/contents/products";
 import { shopData } from "@/contents/ShopData";
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 const Banner = () => {
@@ -20,6 +21,45 @@ const Banner = () => {
         <p className="absolute inset-0 flex items-center justify-center text-[80px] font-bold ">
           Shop Single
         </p>
+      </div>
+    </div>
+  );
+};
+
+const ProductTab = ({ description }: { description: string }) => {
+  const [activeTab, setActiveTab] = useState("description");
+  return (
+    <div className="max-w-[1100px] mx-auto p-4">
+      <div className="flex w-full justify-center space-x-4">
+        <button
+          className={`px-14 py-6 font-semibold text-2xl transition-all duration-300 rounded-xl ${
+            activeTab === "description"
+              ? "bg-[#274c5b] text-white"
+              : "bg-teal-100 text-[#274c5b]"
+          }`}
+          onClick={() => setActiveTab("description")}
+        >
+          Product Description
+        </button>
+        <button
+          className={`px-14 py-6 font-semibold text-2xl transition-all duration-300 rounded-xl ${
+            activeTab === "info"
+              ? "bg-[#274c5b] text-white"
+              : "bg-teal-100 text-[#274c5b]"
+          }`}
+          onClick={() => setActiveTab("info")}
+        >
+          Additional Info
+        </button>
+      </div>
+
+      <div className="mt-6 text-center text-[#525C60]">
+        {activeTab === "description" && (
+          <p className="text-center">{description}</p>
+        )}
+        {activeTab === "info" && (
+          <p className="text-center">Here is some additional information.</p>
+        )}
       </div>
     </div>
   );
@@ -70,10 +110,11 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
           </div>
         </div>
       </div>
-      <div className="mt-[90px] mb-[140px]">
-        {/* product details tab  */}
-        {/* need to be done  */}
-        <p className="text-center">Product details tab</p>
+      {/* product detail tab  */}
+      <div className="mb-[140px]">
+        <div className="mt-[90px] px-[380px]">
+          <ProductTab description={selectedProduct?.description as string} />
+        </div>
       </div>
       {/* related products  */}
       <div className="mb-[150px]">
@@ -89,6 +130,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
           ))}
         </div>
       </div>
+
       <div className="my-[140px] w-full">
         <Subscribe />
       </div>
