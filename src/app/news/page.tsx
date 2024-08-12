@@ -10,7 +10,7 @@ const Banner = () => {
           src="/Images/news/news_banner.png"
           alt=""
         />
-        <p className="absolute inset-0 flex items-center justify-center text-4xl font-bold ">
+        <p className="absolute inset-0 flex items-center justify-center text-[80px] font-bold ">
           Recent News
         </p>
       </div>

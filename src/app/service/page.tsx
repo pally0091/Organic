@@ -11,7 +11,7 @@ const Banner = () => {
           src="/Images/service/Banner Image.png"
           alt=""
         />
-        <p className="absolute inset-0 flex items-center justify-center text-4xl font-bold ">
+        <p className="absolute inset-0 flex items-center justify-center text-[80px] font-bold ">
           Services
         </p>
       </div>
