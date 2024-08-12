@@ -13,6 +13,7 @@ interface News {
 }
 interface NewsContainerProps {
   data: News[];
+  home: boolean;
 }
 const news: News[] = [
   {
@@ -21,7 +22,7 @@ const news: News[] = [
     summary:
       "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
     date: "25 Nov",
-    image: "/Images/news1.png",
+    image: "/Images/news/news1.png",
   },
   {
     title: "Our Favourite Summertime Tommeto",
@@ -29,14 +30,16 @@ const news: News[] = [
     summary:
       "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
     date: "25 Nov",
-    image: "/Images/news2.png",
+    image: "/Images/news/news2.png",
   },
 ];
 
 export const NewsContainer: React.FC<NewsContainerProps> = ({
   data,
+  home,
 }: {
   data: any;
+  home: boolean;
 }) => {
   return (
     <>
@@ -65,7 +68,9 @@ export const NewsContainer: React.FC<NewsContainerProps> = ({
               <p className="text-gray-700 mb-4">{item.summary}</p>
               <Link
                 href="#"
-                className="flex gap-1 items-center justify-center p-[20px] bg-[#EFD372] w-40 text-base rounded-md font-semibold"
+                className={`flex gap-1 items-center justify-center p-[20px] w-40 text-base rounded-md font-semibold ${
+                  home ? "bg-[#EFD372]" : ""
+                }`}
               >
                 Read More
                 <FaCircleArrowRight />
@@ -90,7 +95,10 @@ const News = () => {
           <span>More News</span> <FaArrowAltCircleRight className="text-lg" />
         </button>
       </div>
-      <NewsContainer data={news} />
+      <NewsContainer
+        data={news}
+        home={true}
+      />
     </div>
   );
 };
