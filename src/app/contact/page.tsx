@@ -28,8 +28,52 @@ const Banner = () => {
 
 const Location = () => {
   return (
-    <div className="mt-[80px] px-[260px]">
-      <p>location</p>
+    <div className="mt-[80px] px-[260px] rounded-2xl overflow-hidden">
+      <div className="relative">
+        <img
+          src="/Images/contact_location.jpg"
+          alt=""
+          className="w-full h-auto object-cover rounded-2xl"
+        />
+        <div className="absolute inset-y-0 right-28 flex items-center justify-center rounded-2xl">
+          <div className="bg-white py-11 px-14 rounded-2xl max-w-[515px] w-full">
+            <span className="tag">Location</span>
+            <h1 className="text-5xl font-bold leading-tight">Our Farms</h1>
+            <p className="mt-3">
+              Established fact that a reader will be distracted by the readable
+              content of a page when looking a layout. The point of using.
+            </p>
+            <div className="flex gap-2 mt-5">
+              <img
+                src="/Images/pin.png"
+                alt=""
+                className="w-[50px] h-[50px]"
+              />
+              <div className="">
+                <h1 className="text-lg font-bold">New York, USA:</h1>
+                <p>
+                  299 Park Avenue New York,
+                  <br /> New York 10171
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-2 mt-5">
+              <img
+                src="/Images/pin.png"
+                alt=""
+                className="w-[50px] h-[50px]"
+              />
+              <div className="">
+                <h1 className="text-lg font-bold">London, UK:</h1>
+                <p>
+                  30 Stamford Street,
+                  <br /> London SE1 9LQ
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
