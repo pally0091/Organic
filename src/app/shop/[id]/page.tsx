@@ -69,7 +69,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
   const id = params.id;
 
   const selectedProduct = shopData.find((data) => String(data.id) == id);
-  console.log(selectedProduct);
+
   return (
     <div>
       <Banner />
