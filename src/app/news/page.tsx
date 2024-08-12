@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { NewsContainer } from "@/components/Home/News";
 import Subscribe from "@/components/Subscribe";
+import { news } from "@/contents/news";
 import React from "react";
 
 interface News {
@@ -13,56 +14,6 @@ interface News {
 interface NewsContainerProps {
   data: News[];
 }
-const news: News[] = [
-  {
-    title: "The Benefits of Vitamin D & How to Get It",
-    author: "Rachi Card",
-    summary:
-      "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    date: "25 Nov",
-    image: "/Images/news/news1.png",
-  },
-  {
-    title: "Our Favourite Summertime Tommeto",
-    author: "Rachi Card",
-    summary:
-      "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    date: "25 Nov",
-    image: "/Images/news/news2.png",
-  },
-  {
-    title: "Benefits of Vitamin C & How to Get It",
-    author: "Rachi Card",
-    summary:
-      "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    date: "25 Nov",
-    image: "/Images/news/news3.png",
-  },
-  {
-    title: "Research More Organic Foods",
-    author: "Rachi Card",
-    summary:
-      "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    date: "25 Nov",
-    image: "/Images/news/news4.png",
-  },
-  {
-    title: "Everyday Fresh Fruites",
-    author: "Rachi Card",
-    summary:
-      "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    date: "25 Nov",
-    image: "/Images/news/news5.png",
-  },
-  {
-    title: "Don’t Use Plastic Product! it’s Kill Nature",
-    author: "Rachi Card",
-    summary:
-      "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    date: "25 Nov",
-    image: "/Images/news/news6.png",
-  },
-];
 
 const Banner = () => {
   return (

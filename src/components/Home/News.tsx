@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { news } from "@/contents/news";
 import Link from "next/link";
 import React from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
@@ -15,24 +16,6 @@ interface NewsContainerProps {
   data: News[];
   home: boolean;
 }
-const news: News[] = [
-  {
-    title: "The Benefits of Vitamin D & How to Get It",
-    author: "Rachi Card",
-    summary:
-      "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    date: "25 Nov",
-    image: "/Images/news/news1.png",
-  },
-  {
-    title: "Our Favourite Summertime Tommeto",
-    author: "Rachi Card",
-    summary:
-      "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-    date: "25 Nov",
-    image: "/Images/news/news2.png",
-  },
-];
 
 export const NewsContainer: React.FC<NewsContainerProps> = ({
   data,
@@ -96,7 +79,7 @@ const News = () => {
         </button>
       </div>
       <NewsContainer
-        data={news}
+        data={news.slice(0, 2)}
         home={true}
       />
     </div>
