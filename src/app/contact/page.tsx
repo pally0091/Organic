@@ -26,6 +26,14 @@ const Banner = () => {
   );
 };
 
+const Location = () => {
+  return (
+    <div className="mt-[80px] px-[260px]">
+      <p>location</p>
+    </div>
+  );
+};
+
 const ContactPage = () => {
   return (
     <div>
@@ -101,6 +109,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+      <Location />
       <ContactForm />
       <div className="my-[140px] w-full">
         <Subscribe />

@@ -64,7 +64,7 @@ const MenuContainer = () => {
               >
                 {item.subMenu?.map((submenuItem) => (
                   <li
-                    className="relative text-base text-black duration-500 py-2"
+                    className="relative text-base text-black duration-500 py-2 px-2"
                     key={submenuItem.id}
                   >
                     <Link
