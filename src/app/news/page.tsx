@@ -4,17 +4,6 @@ import Subscribe from "@/components/Subscribe";
 import { news } from "@/contents/news";
 import React from "react";
 
-interface News {
-  title: string;
-  author: string;
-  summary: string;
-  date: string;
-  image: string;
-}
-interface NewsContainerProps {
-  data: News[];
-}
-
 const Banner = () => {
   return (
     <div id="aboutBanner">

@@ -50,7 +50,7 @@ export const NewsContainer: React.FC<NewsContainerProps> = ({
               <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
               <p className="text-gray-700 mb-4">{item.summary}</p>
               <Link
-                href="#"
+                href={`/news/${item.id}`}
                 className={`flex gap-1 items-center justify-center p-[20px] w-40 text-base rounded-md font-semibold ${
                   home ? "bg-[#EFD372]" : ""
                 }`}
