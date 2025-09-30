@@ -7,31 +7,33 @@ import { ProductCard } from "./Products";
 const OfferSection = () => {
   const data = offeredProducts;
   return (
-    <div className="px-[250px] py-[200px] bg-[#274C5B]">
-      <div className="flex justify-between items-center mb-[50px]">
-        <div>
-          <span className="tag mb-2">Offer </span>
-          <h1 className="text-white font-semibold text-[50px]">
-            We Offer Organic For You
-          </h1>
+    <div className="mt-20 lg:mt-0">
+      <div className="bg-[#274C5B] px-6 py-16 md:px-10 lg:px-20 xl:px-[150px] xl:py-[200px]">
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-6 mb-12">
+          <div className="text-center lg:text-left">
+            <span className="tag mb-2">Offer</span>
+            <h1 className="text-white font-semibold text-3xl md:text-4xl lg:text-5xl">
+              We Offer Organic For You
+            </h1>
+          </div>
+          <div>
+            <Link
+              href="#"
+              className="flex gap-2 items-center justify-center px-6 py-3 bg-[#EFD372] w-max text-sm md:text-base rounded-md font-semibold hover:bg-[#e5c756] transition"
+            >
+              View All Products
+              <FaCircleArrowRight />
+            </Link>
+          </div>
         </div>
-        <div>
-          <Link
-            href="#"
-            className="flex gap-1 items-center justify-center p-[26px] bg-[#EFD372] w-[220px] text-base rounded-md"
-          >
-            View All Products
-            <FaCircleArrowRight />
-          </Link>
+
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+          {data.map((item) => (
+            <ProductCard key={item.id} data={item} />
+          ))}
         </div>
-      </div>
-      <div className="grid grid-cols-4 gap-[20px]">
-        {data.map((item) => (
-          <ProductCard
-            key={item.id}
-            data={item}
-          />
-        ))}
       </div>
     </div>
   );

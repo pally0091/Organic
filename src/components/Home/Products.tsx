@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import { products } from "@/contents/products";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaCircleArrowRight } from "react-icons/fa6";
@@ -19,24 +19,28 @@ interface ProductCardProps {
 
 export const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   const { name, price, discountedPrice, image, type } = data;
+
   return (
-    <div className="bg-[#F9F8F8] rounded-xl p-[30px]">
-      <p className="bg-[#274C5B] w-fit text-white px-1.5 py-1 rounded-xl mb-[13px]">
+    <div className="bg-[#F9F8F8] rounded-xl p-5 hover:shadow-lg transition-shadow duration-300">
+      <p className="bg-[#274C5B] w-fit text-white px-2 py-1 rounded-full mb-3 text-sm">
         {type}
       </p>
-      <div className="aspect-square">
-        <img
+      <div className="aspect-square rounded-xl overflow-hidden mb-3">
+        {/* <img src={image} alt={name} className="w-full h-full object-cover" /> */}
+        <Image
           src={image}
           alt={name}
+          width={500}
+          height={500}
           className="w-full h-full object-cover rounded-xl"
         />
       </div>
-      <div className="mt-1">
-        <p className="font-semibold">{name}</p>
-        <hr className="w-full bg-gray-400 my-[10px]" />
-        <div className="flex justify-between">
+      <div>
+        <p className="font-semibold text-lg mb-2">{name}</p>
+        <hr className="w-full border-gray-300 my-2" />
+        <div className="flex justify-between items-center text-sm md:text-base">
           <p>
-            <span className="line-through text-gray-500">{price}</span>{" "}
+            <span className="line-through text-gray-400 mr-2">{price}</span>
             <span className="font-semibold">{discountedPrice}</span>
           </p>
           <p>⭐⭐⭐⭐⭐</p>
@@ -48,23 +52,27 @@ export const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
 
 const Products = () => {
   return (
-    <div className="mb-[150px]">
-      <div className="text-center">
-        <span className="tag mb-2">Categories </span>
-        <h1 className="text-[50px] font-bold">Our Products</h1>
+    <div className="mb-12 px-4 md:px-10 lg:px-24 mt-6">
+      {/* Title */}
+      <div className="text-center mb-12">
+        <span className="tag mb-4 ">Categories</span>
+        <h1 className="text-3xl md:text-4xl lg:text-[50px] font-bold text-[#1F3B44]">
+          Our Products
+        </h1>
       </div>
-      <div className="my-[40px] max-w-[1400px] w-full mx-auto grid grid-cols-4 gap-[20px] mb-32">
+
+      {/* Product Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
         {products.map((item) => (
-          <ProductCard
-            key={item.id}
-            data={item}
-          />
+          <ProductCard key={item.id} data={item} />
         ))}
       </div>
-      <div className="w-full flex justify-center">
+
+      {/* Load More Button */}
+      <div className="w-full flex justify-center mt-12">
         <Link
           href="#"
-          className="flex gap-1 items-center justify-center p-[26px] bg-[#274C5B] w-[220px] text-base rounded-md font-bold text-white"
+          className="flex gap-2 items-center justify-center px-6 py-3 bg-[#274C5B] w-max text-white text-base rounded-md font-bold hover:bg-[#1f3b44] transition"
         >
           Load more
           <FaCircleArrowRight />

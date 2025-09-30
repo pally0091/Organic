@@ -20,16 +20,35 @@ const Items = () => {
     },
   ];
   return (
-    <div className="py-[190px] bg-[#F1F8F4]">
-      <div className="grid grid-cols-3 gap-[40px]">
+    // <div className="py-[190px] bg-[#F1F8F4]">
+    //   <div className="grid grid-cols-3 gap-[40px]">
+    //     {data.map((item) => (
+    //       <div key={item.id}>
+    //         <Image
+    //           src={item.img}
+    //           alt={item.name}
+    //           width={610}
+    //           height={580}
+    //           className="w-full h-full"
+    //         />
+    //       </div>
+    //     ))}
+    //   </div>
+    // </div>
+    <div className="py-24 bg-[#F1F8F4]">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {data.map((item) => (
-          <div key={item.id}>
+          <div
+            key={item.id}
+            className="w-full h-auto rounded-lg overflow-hidden"
+          >
             <Image
               src={item.img}
               alt={item.name}
               width={610}
               height={580}
-              className="w-full h-full"
+              className="w-full h-auto object-cover"
+              priority
             />
           </div>
         ))}
