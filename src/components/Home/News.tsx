@@ -27,7 +27,7 @@ export const NewsContainer: React.FC<NewsContainerProps> = ({
 }) => {
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 my-10">
         {data.map((item) => (
           <div key={item.id} className="relative rounded-3xl shadow-lg">
             {/* Image */}

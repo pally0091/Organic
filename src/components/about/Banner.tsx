@@ -5,17 +5,12 @@ const Banner = () => {
   return (
     <div
       id="aboutBanner"
-      className="mb-16"
+      className="relative w-full h-[60vh] bg-cover bg-center"
+      style={{ backgroundImage: "url('/Images/about/banner.png')" }}
     >
-      <div className="relative text-center">
-        <img
-          src="/Images/about/banner_bg.png"
-          alt=""
-        />
-        <p className="absolute inset-0 flex items-center justify-center text-[80px] font-bold ">
-          About Us
-        </p>
-      </div>
+      <p className="absolute inset-0 flex items-center justify-center lg:text-[80px] text-[60px] font-bold  mt-5">
+        About Us
+      </p>
     </div>
   );
 };
