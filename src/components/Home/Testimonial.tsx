@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import React from "react";
 
 const Testimonial = () => {
   return (
@@ -24,7 +23,9 @@ const Testimonial = () => {
               alt="Customer Avatar"
               width={100}
               height={100}
+              className="rounded-full transition-transform duration-500 ease-out hover:scale-110 hover:shadow-lg"
             />
+
             <p>⭐⭐⭐⭐⭐</p>
             <p className="text-center py-2 text-base md:text-lg max-w-[700px]">
               Simply dummy text of the printing and typesetting industry. Lorem
@@ -48,9 +49,11 @@ const Testimonial = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] border-2 border-[#7EB693] rounded-full p-2 flex justify-center items-center mx-auto"
+                className="w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] 
+                 border-2  rounded-full p-2 flex justify-center items-center mx-auto
+                 transition-transform duration-500 ease-out hover:scale-105 hover:shadow-xl hover:bg-gradient-to-tr "
               >
-                <div className="flex flex-col items-center justify-center bg-[#F1F1F1] w-full h-full rounded-full">
+                <div className="flex flex-col items-center justify-center bg-[#F1F1F1] w-full h-full rounded-full transition-colors duration-500 hover:bg-transparent">
                   <h2 className="text-2xl md:text-4xl font-semibold">
                     {item.value}
                   </h2>

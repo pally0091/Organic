@@ -20,34 +20,21 @@ const Items = () => {
     },
   ];
   return (
-    // <div className="py-[190px] bg-[#F1F8F4]">
-    //   <div className="grid grid-cols-3 gap-[40px]">
-    //     {data.map((item) => (
-    //       <div key={item.id}>
-    //         <Image
-    //           src={item.img}
-    //           alt={item.name}
-    //           width={610}
-    //           height={580}
-    //           className="w-full h-full"
-    //         />
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
     <div className="py-24 bg-[#F1F8F4]">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {data.map((item) => (
           <div
             key={item.id}
-            className="w-full h-auto rounded-lg overflow-hidden"
+            className="w-full h-auto rounded-lg overflow-hidden 
+                   transition-transform duration-500 ease-out 
+                   hover:scale-105 hover:shadow-xl hover:-translate-y-1"
           >
             <Image
               src={item.img}
               alt={item.name}
               width={610}
               height={580}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover rounded-lg transition-transform duration-500 ease-out"
               priority
             />
           </div>

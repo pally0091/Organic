@@ -20,10 +20,12 @@ const OfferSection = () => {
           <div>
             <Link
               href="#"
-              className="flex gap-2 items-center justify-center px-6 py-3 bg-[#EFD372] w-max text-sm md:text-base rounded-md font-semibold hover:bg-[#e5c756] transition"
+              className="flex gap-2 items-center justify-center px-6 py-3 bg-[#EFD372] w-max text-sm md:text-base rounded-md font-semibold 
+             transition-all duration-300 ease-out
+             hover:bg-[#e5c756] hover:scale-105 hover:shadow-lg hover:-translate-y-1"
             >
               View All Products
-              <FaCircleArrowRight />
+              <FaCircleArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
         </div>

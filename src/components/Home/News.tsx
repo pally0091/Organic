@@ -41,11 +41,6 @@ export const NewsContainer: React.FC<NewsContainerProps> = ({
               />
             </div>
 
-            {/* Date
-            <div className="absolute top-1 left-4 bg-white rounded-full px-3 py-2 text-xs sm:text-sm font-semibold text-gray-700 shadow-md">
-              {item.date}
-            </div> */}
-            {/* Date */}
             <div className="absolute top-1 left-4 bg-white rounded-full px-3 py-2 text-xs sm:text-sm font-semibold text-gray-700 shadow-md hidden sm:block">
               {item.date}
             </div>
@@ -64,11 +59,14 @@ export const NewsContainer: React.FC<NewsContainerProps> = ({
 
               <Link
                 href={`/news/${item.id}`}
-                className={`flex gap-2 sm:gap-3 items-center justify-center px-4 sm:px-6 py-2 sm:py-3 w-max text-sm sm:text-base rounded-md font-semibold ${
-                  home ? "bg-[#EFD372]" : "bg-gray-200"
-                }`}
+                className={`flex gap-2 sm:gap-3 items-center justify-center px-4 sm:px-6 py-2 sm:py-3 w-max text-sm sm:text-base rounded-md font-semibold
+              transition-transform duration-300 ease-out
+              hover:scale-105 hover:shadow-lg hover:-translate-y-1 ${
+                home ? "bg-[#EFD372]" : "bg-gray-200"
+              }`}
               >
-                Read More <FaCircleArrowRight />
+                Read More
+                <FaCircleArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
@@ -89,8 +87,14 @@ const News = () => {
         <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-semibold w-full lg:w-1/2 leading-snug">
           Discover weekly content about organic food, & more
         </h1>
-        <button className="py-3 sm:py-4 px-6 sm:px-10 rounded-xl border-2 border-[#335b6b] font-semibold flex gap-2 items-center text-sm sm:text-base">
-          <span>More News</span> <FaArrowAltCircleRight className="text-lg" />
+
+        <button
+          className="py-3 sm:py-4 px-6 sm:px-10 rounded-xl border-2 border-[#335b6b] font-semibold flex gap-2 items-center text-sm sm:text-base
+                   transition-all duration-300 ease-out
+                   hover:bg-[#335b6b] hover:text-white hover:scale-105 hover:shadow-lg hover:-translate-y-1"
+        >
+          <span>More News</span>
+          <FaArrowAltCircleRight className="text-lg transition-transform duration-300 group-hover:translate-x-1" />
         </button>
       </div>
 

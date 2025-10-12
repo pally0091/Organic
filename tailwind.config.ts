@@ -13,8 +13,21 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+
+      // 🟢 এই অংশটা extend এর ভিতরে থাকবে
+      keyframes: {
+        gradientMove: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+      },
+      animation: {
+        gradientMove: "gradientMove 3s ease infinite",
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

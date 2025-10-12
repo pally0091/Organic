@@ -13,9 +13,15 @@ import {
   IoMdClose,
 } from "react-icons/io";
 
-// Logo Component
+// ------------------- Logo -------------------
 const LogoContainer = () => (
-  <div className="w-28 md:w-36 lg:w-40">
+  <div
+    className="w-28 md:w-36 lg:w-32 xl:w-40
+                transform transition duration-500
+                hover:scale-110 hover:-translate-y-1 hover:rotate-3
+                hover:shadow-2xl hover:shadow-[#EFD372]/50
+                animate-logoPulse"
+  >
     <Image
       src="/Images/Logo.png"
       alt="Logo"
@@ -26,7 +32,7 @@ const LogoContainer = () => (
   </div>
 );
 
-// Menu Component
+// ------------------- Menu -------------------
 const MenuContainer = ({ isMobile, closeMenu }) => {
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const pathname = usePathname();
@@ -38,11 +44,16 @@ const MenuContainer = ({ isMobile, closeMenu }) => {
   return (
     <nav
       className={`${
-        isMobile ? "flex flex-col gap-4 mt-4" : "flex gap-10 items-center"
+        isMobile ? "flex flex-col gap-4 mt-4" : "flex gap-8 items-center"
       }`}
     >
       {menu.map((item) => (
-        <li key={item.id} className="list-none relative">
+        <li
+          key={item.id}
+          className="list-none relative   rounded-md
+             transition-all duration-300
+             hover:translate-x-1  cursor-pointer"
+        >
           {item.url ? (
             <Link
               href={item.url}
@@ -104,7 +115,7 @@ const MenuContainer = ({ isMobile, closeMenu }) => {
   );
 };
 
-// Search + Cart Component
+// ------------------- Search + Cart -------------------
 const SearchSection = () => {
   const [search, setSearch] = useState("");
 
@@ -116,8 +127,13 @@ const SearchSection = () => {
   };
 
   return (
-    <div className="flex gap-3 items-center w-full md:w-auto">
-      <div className="flex items-center justify-between gap-1 py-1 px-3 bg-[#fafafa] rounded-full w-full md:w-[320px]">
+    <div className="flex gap-8 items-center w-full lg:w-auto">
+      {/* Search Input */}
+      <div
+        className="flex items-center py-1 px-2 bg-[#fafafa] rounded-full
+             w-full md:w-[240px] lg:w-[260px] xl:w-[280px]
+             transition-shadow duration-300 hover:shadow-md hover:shadow-[#7EB693]/40"
+      >
         <input
           type="text"
           value={search}
@@ -125,40 +141,64 @@ const SearchSection = () => {
           placeholder="Search..."
           className="bg-[#fafafa] outline-none flex-1 text-sm md:text-base"
         />
-        <button onClick={handleSearch}>
+        <button
+          onClick={handleSearch}
+          className="transition-transform duration-300 hover:scale-110"
+        >
           <span className="rounded-full bg-[#7eb693] text-white w-8 h-8 flex justify-center items-center">
             <IoIosSearch className="text-lg" />
           </span>
         </button>
       </div>
+
+      {/* Cart Button */}
       <CartBtn />
     </div>
   );
 };
 
 const CartBtn = () => (
-  <button className="flex items-center gap-1 rounded-full p-2 border border-gray-300 w-auto md:w-[120px]">
-    <span className="w-6 h-6 rounded-full bg-[#274c5b] text-white flex justify-center items-center">
+  <button
+    className="flex items-center gap-1 rounded-full p-2 border border-gray-300 w-auto
+                   transform transition duration-300
+                   hover:scale-105 hover:-translate-y-1 hover:shadow-lg hover:shadow-[#274c5b]/30"
+  >
+    <span
+      className="w-6 h-6 rounded-full bg-[#274c5b] text-white flex justify-center items-center
+                   transition-transform duration-300 hover:scale-110"
+    >
       <IoIosCart className="text-lg" />
     </span>
-    <p className="text-[#274c5b] font-semibold hidden md:block">Cart (0)</p>
+    {/* Text hide at lg, show from xl */}
+    <p className="text-[#274c5b] font-semibold hidden xl:block transition-colors duration-300 hover:text-[#1f3b44]">
+      Cart (0)
+    </p>
   </button>
 );
 
-// Navbar
+// ------------------- Navbar -------------------
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div className="w-full bg-white shadow-md fixed top-0 left-0 z-[100]">
-      <div className="px-4 md:px-6 lg:px-20 py-4 md:py-4">
-        <div className="hidden lg:flex justify-between items-center">
+      <div className="px-4 md:px-6 lg:px-10 xl:px-20 py-4">
+        {/* Desktop (lg and up) */}
+        <div className="hidden lg:flex items-center justify-between gap-6 w-full">
           <LogoContainer />
-          <MenuContainer isMobile={undefined} closeMenu={undefined} />
-          <SearchSection />
+
+          {/* Menu center */}
+          <div className="flex-1 flex justify-center">
+            <MenuContainer isMobile={undefined} closeMenu={undefined} />
+          </div>
+
+          {/* Search + Cart Right */}
+          <div className="flex-shrink-0">
+            <SearchSection />
+          </div>
         </div>
 
-        {/* Mobile & Medium Screen */}
+        {/* Mobile & Tablet */}
         <div className="flex justify-between items-center lg:hidden">
           <LogoContainer />
           <button

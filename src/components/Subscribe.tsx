@@ -14,11 +14,18 @@ const Subscribe = () => {
       {/* Input + Button */}
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-2 w-full lg:w-auto">
         <input
-          className="w-full sm:w-[350px] rounded-2xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#264a59]"
+          className="w-full sm:w-[350px] rounded-2xl px-4 py-3 
+               border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#264a59] 
+               focus:border-[#264a59] transition-all duration-300 ease-out
+               hover:border-[#264a59] hover:shadow-sm hover:shadow-[#264a59]/30"
           type="email"
           placeholder="Your Email Address"
         />
-        <button className="w-full sm:w-[220px] px-4 py-3 rounded-2xl bg-[#264a59] text-white font-semibold hover:bg-[#1f3b44] transition">
+        <button
+          className="w-full sm:w-[220px] px-4 py-3 rounded-2xl bg-[#264a59] text-white font-semibold 
+                     transition-all duration-300 ease-out
+                     hover:scale-105 hover:shadow-lg hover:-translate-y-1 hover:shadow-[#264a59]/50"
+        >
           Subscribe
         </button>
       </div>

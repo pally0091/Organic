@@ -46,7 +46,9 @@ const TextContainer = () => {
                 alt={item.title}
                 width={80}
                 height={80}
-                className="w-full h-full object-contain"
+                // className="w-full h-full object-contain"
+                className="w-full h-auto rounded-lg shadow-lg object-contain 
+                 transform transition-transform duration-700 ease-out hover:scale-105 hover:shadow-2xl"
               />
             </div>
             <div className="flex flex-col gap-1">
@@ -62,10 +64,24 @@ const TextContainer = () => {
       {/* Button */}
       <Link
         href="#"
-        className="flex gap-2 items-center justify-center px-6 py-3 bg-[#274C5B] w-max text-white text-base rounded-md hover:bg-[#1f3b44] transition"
+        className="group relative flex gap-2 items-center justify-center px-6 py-3 
+             bg-[#274C5B] w-max text-white text-base rounded-md 
+             transition-all duration-500 ease-out
+             hover:scale-105 hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)] hover:bg-[#1f3b44]"
       >
-        Shop Now
-        <FaCircleArrowRight />
+        <span className="relative z-10">Shop Now</span>
+
+        <FaCircleArrowRight
+          className="relative z-10 text-lg transition-transform duration-500 ease-out
+               group-hover:translate-x-2 group-hover:rotate-12"
+        />
+
+        {/* Light shimmer effect */}
+        <span
+          className="absolute inset-0 rounded-md bg-gradient-to-r from-transparent via-white/20 to-transparent 
+               translate-x-[-200%] group-hover:translate-x-[200%]
+               transition-transform duration-1000 ease-in-out"
+        ></span>
       </Link>
     </div>
   );
@@ -75,14 +91,15 @@ const Banner2 = () => {
   return (
     <div className="bg-[#F9F8F8] py-16 px-6 md:px-10 lg:px-24">
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-        {/* Image Section প্রথমে দিলে বামে থাকবে */}
+        {/* Image Section  */}
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
             src="/Images/F-1.png"
             alt="Farm Banner"
             width={900}
             height={900}
-            className="w-full h-auto rounded-lg shadow-lg object-contain"
+            className="w-full h-auto rounded-lg shadow-lg object-contain 
+                 transform transition-transform duration-700 ease-out hover:scale-105 hover:shadow-2xl"
           />
         </div>
 
