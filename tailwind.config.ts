@@ -14,7 +14,6 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
 
-      // 🟢 এই অংশটা extend এর ভিতরে থাকবে
       keyframes: {
         gradientMove: {
           "0%": { backgroundPosition: "0% 50%" },
