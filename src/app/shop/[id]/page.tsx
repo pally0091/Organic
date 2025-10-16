@@ -3,6 +3,7 @@ import { ProductCard } from "@/components/Home/Products";
 import Subscribe from "@/components/Subscribe";
 import { products } from "@/contents/products";
 import { shopData } from "@/contents/ShopData";
+import Image from "next/image";
 import React, { useState } from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
@@ -96,10 +97,12 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
       <div className="mt-[100px] px-4 sm:px-8 md:px-16 lg:px-[120px] xl:px-[260px] flex flex-col lg:flex-row items-center gap-10">
         {/* Image Section */}
         <div className="relative w-full lg:w-1/2 p-4 sm:p-6 md:p-8">
-          <img
+          <Image
             className="w-full rounded-2xl shadow-lg transition-transform duration-500 hover:scale-105"
-            src={selectedProduct?.image}
-            alt={selectedProduct?.name}
+            src={selectedProduct?.image ?? "/Images/shop/default.png"}
+            alt={selectedProduct?.name ?? "Product image"}
+            width={500}
+            height={500}
           />
           <p className="bg-[#274C5B] text-white px-2 py-1 rounded-md absolute top-4 left-4 text-sm sm:text-base font-semibold">
             {selectedProduct?.type}
@@ -187,7 +190,10 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
     "
         >
           {products.slice(0, 4).map((item) => (
-            <ProductCard key={item.id} data={item} />
+            <ProductCard
+              key={item.id}
+              data={item}
+            />
           ))}
         </div>
       </div>

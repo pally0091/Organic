@@ -28,8 +28,11 @@ export const NewsContainer: React.FC<NewsContainerProps> = ({
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 my-10">
-        {data.map((item) => (
-          <div key={item.id} className="relative rounded-3xl shadow-lg">
+        {data.map((item: any) => (
+          <div
+            key={item.id}
+            className="relative rounded-3xl shadow-lg"
+          >
             {/* Image */}
             <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-80 rounded-3xl overflow-hidden">
               <Image
@@ -99,7 +102,10 @@ const News = () => {
       </div>
 
       {/* News Items */}
-      <NewsContainer data={news.slice(0, 2)} home={true} />
+      <NewsContainer
+        data={news.slice(0, 2)}
+        home={true}
+      />
     </div>
   );
 };

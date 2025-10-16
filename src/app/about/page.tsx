@@ -29,13 +29,13 @@ const AboutUs = () => {
         <div className="mt-5 flex flex-col gap-4  text-base sm:text-lg">
           <p>
             Simply dummy text of the printing and typesetting industry. Lorem
-            had ceased to be the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley.
+            had ceased to be the industry&lsquo;s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley.
           </p>
           <p>
             Simply dummy text of the printing and typesetting industry. Lorem
-            had ceased to be the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley.
+            had ceased to be the industry&lsquo;s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ const Choose = () => {
           </h1>
           <p className="mt-4 text-gray-700 text-base sm:text-lg">
             Simply dummy text of the printing and typesetting industry. Lorem
-            had ceased to been the industry's standard the 1500s, when an
+            had ceased to been the industry&lsquo;s standard the 1500s, when an
             unknown.
           </p>
 
@@ -326,7 +326,7 @@ const Team = () => {
         </h1>
         <p className="text-gray-700 text-base sm:text-lg mt-2">
           Simply dummy text of the printing and typesetting industry. Lorem had
-          ceased to been the industry's standard dummy text ever since the
+          ceased to been the industry&lsquo;s standard dummy text ever since the
           1500s, when an unknown printer took a galley.
         </p>
       </div>

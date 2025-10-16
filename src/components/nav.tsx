@@ -33,11 +33,17 @@ const LogoContainer = () => (
 );
 
 // ------------------- Menu -------------------
-const MenuContainer = ({ isMobile, closeMenu }) => {
-  const [openSubmenu, setOpenSubmenu] = useState(null);
+const MenuContainer = ({
+  isMobile,
+  closeMenu,
+}: {
+  isMobile: boolean;
+  closeMenu: () => void;
+}) => {
+  const [openSubmenu, setOpenSubmenu] = useState<number | null>(null);
   const pathname = usePathname();
 
-  const toggleSubmenu = (id) => {
+  const toggleSubmenu = (id: number) => {
     setOpenSubmenu(openSubmenu === id ? null : id);
   };
 
@@ -189,7 +195,10 @@ const Navbar = () => {
 
           {/* Menu center */}
           <div className="flex-1 flex justify-center">
-            <MenuContainer isMobile={undefined} closeMenu={undefined} />
+            <MenuContainer
+              isMobile={false}
+              closeMenu={() => {}}
+            />
           </div>
 
           {/* Search + Cart Right */}
