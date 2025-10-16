@@ -1,8 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable @next/next/no-img-element */
 import Subscribe from "@/components/Subscribe";
 import { news } from "@/contents/news";
-import React from "react";
 import { FaUser } from "react-icons/fa6";
 
 const NewsDetailPage = ({ params }: { params: { id: string } }) => {
@@ -11,8 +8,6 @@ const NewsDetailPage = ({ params }: { params: { id: string } }) => {
     <div>
       {/* heading */}
       <div className=" ">
-        {/* <img src="/Images/portfolio/p5_description.png" alt="" /> */}
-
         <div
           className="relative w-full h-[60vh] bg-cover bg-center"
           style={{
@@ -60,8 +55,8 @@ const NewsDetailPage = ({ params }: { params: { id: string } }) => {
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking a layout. The point of using
           Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
+          letters, as opposed to using &lsquo;Content here, content here&lsquo;,
+          making it look like readable English.
         </p>
 
         {/* UL List */}
@@ -70,7 +65,7 @@ const NewsDetailPage = ({ params }: { params: { id: string } }) => {
             Publishing packages and web pageLorem Ipsum as their default
           </li>
           <li className="ms-6">
-            Content here, content here', making it look like readable
+            Content here, content here&lsquo;, making it look like readable
           </li>
           <li className="ms-6">
             Packages and web pageLorem Ipsum as their default
@@ -94,8 +89,8 @@ const NewsDetailPage = ({ params }: { params: { id: string } }) => {
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking a layout. The point of using
           Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here, content here', making it
-          look like readable English.
+          letters, as opposed to using 'Content here, content here&lsquo;,
+          making it look like readable English.
         </p>
 
         {/* OL List */}
@@ -104,7 +99,7 @@ const NewsDetailPage = ({ params }: { params: { id: string } }) => {
             Publishing packages and web pageLorem Ipsum as their default
           </li>
           <li className="ms-6">
-            Content here, content here', making it look like readable
+            Content here, content here&lsquo;, making it look like readable
           </li>
           <li className="ms-6">
             Packages and web pageLorem Ipsum as their default
