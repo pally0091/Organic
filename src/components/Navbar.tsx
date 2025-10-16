@@ -32,7 +32,13 @@ const LogoContainer = () => (
 );
 
 // ------------------- Menu -------------------
-const MenuContainer = ({ isMobile, closeMenu }: any) => {
+const MenuContainer = ({
+  isMobile,
+  closeMenu,
+}: {
+  isMobile: boolean;
+  closeMenu: () => void;
+}) => {
   const [openSubmenu, setOpenSubmenu] = useState<number | null>(null);
   const pathname = usePathname();
 
@@ -188,7 +194,10 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center justify-between gap-6 w-full">
           <LogoContainer />
           <div className="flex-1 flex justify-center">
-            <MenuContainer isMobile={undefined} closeMenu={undefined} />
+            <MenuContainer
+              isMobile={false}
+              closeMenu={() => {}}
+            />
           </div>
           <div className="flex-shrink-0">
             <SearchSection />
